@@ -3,28 +3,28 @@
 int *getNEvenNumbers(int n){
 
 	int *numbers = malloc(n * sizeof(int)) ;
-	int incial = 2 ;
+	int inicial = 2 ;
 
-	for(int c =0; c < n; c++)
+	for(int c = 0; c < n; c++)
 	{
-		numbers[c] = incial ;
-		incial += 2 ;
-		printf("%d ", numbers[c]) ;	
+		numbers[c] = inicial ;
+		inicial += 2;
 	}
-
 	return numbers ;
 }
 
 int main(int argc, char *argv[]){
 
 	char aux ;
-	int retval ;
+	int *retval ;
 
 	aux = atoi(argv[1]) ;
 
-	*getNEvenNumbers(aux) ;	
+	retval = getNEvenNumbers(aux) ;	
 
-	printf("\n") ;
-
+	for(int c = 0;c < aux;c++)
+	{
+		printf("%d ", retval[c]);
+	}
 	return 0 ;
 }
