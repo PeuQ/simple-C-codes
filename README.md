@@ -1,1 +1,1 @@
-# simple-C-codes
+# a-study-in-c
